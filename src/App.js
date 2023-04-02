@@ -4,7 +4,6 @@ import Sort from './components/Sort';
 import Categories from './components/Categories';
 import PizzaBlock from './components/PizzaBlock';
 import './scss/app.scss';
-//import pizzas from './assets/pizzas.json';
 
 function App() {
   const [items, setItems] = React.useState([]);
