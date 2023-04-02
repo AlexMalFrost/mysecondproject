@@ -9,7 +9,7 @@ import './scss/app.scss';
 function App() {
   const [items, setItems] = React.useState([]);
   React.useEffect(() => {
-    fetch('https://6429b940ebb1476fcc4f9b86.mockapi.io/items')
+    fetch('https://')
       .then((res) => res.json())
       .then((arr) => {
         setItems(arr);
