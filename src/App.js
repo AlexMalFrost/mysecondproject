@@ -7,12 +7,15 @@ import Cart from './pages/Cart';
 import { useSelector, useDispatch } from 'react-redux';
 import './scss/app.scss';
 
-export const SearchContext = React.createContext();
-
 function App() {
-  const [searchValue, setSearchValue] = React.useState('');
-  //const count = useSelector((state) => state.counter.value);
-  const dispatch = useDispatch();
+  const [items, setItems] = React.useState([]);
+  React.useEffect(() => {
+    fetch('https://')
+      .then((res) => res.json())
+      .then((arr) => {
+        setItems(arr);
+      });
+  }, []);
   return (
     <div className="wrapper">
       <SearchContext.Provider value={{ searchValue, setSearchValue }}>
