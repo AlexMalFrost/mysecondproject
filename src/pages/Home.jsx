@@ -30,7 +30,7 @@ export default function Home() {
     const search = searchValue ? `&search=${searchValue}` : '';
 
     fetch(
-      `https://6429b940ebb1476fcc4f9b86.mockapi.io/items?page=${currentPage}&limit=4&${category}${search}&sortBy=${sortby}&order=${order}`,
+      `https://.mockapi.io/items?page=${currentPage}&limit=4&${category}${search}&sortBy=${sortby}&order=${order}`,
     )
       .then((res) => res.json())
       .then((arr) => {
